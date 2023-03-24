@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB10D00F29CD850C006AB395 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB10D00E29CD850C006AB395 /* OnboardingView.swift */; };
 		AB2642D929CC355C00D70D0F /* FructusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2642D829CC355C00D70D0F /* FructusApp.swift */; };
-		AB2642DB29CC355C00D70D0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2642DA29CC355C00D70D0F /* ContentView.swift */; };
 		AB2642DD29CC355D00D70D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2642DC29CC355D00D70D0F /* Assets.xcassets */; };
 		AB2642E029CC355D00D70D0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2642DF29CC355D00D70D0F /* Preview Assets.xcassets */; };
+		AB2642E929CC507200D70D0F /* FruitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2642E829CC507200D70D0F /* FruitCardView.swift */; };
+		AB2642EB29CC5AEC00D70D0F /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2642EA29CC5AEC00D70D0F /* StartButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB10D00E29CD850C006AB395 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		AB2642D529CC355C00D70D0F /* Fructus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fructus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB2642D829CC355C00D70D0F /* FructusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusApp.swift; sourceTree = "<group>"; };
-		AB2642DA29CC355C00D70D0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AB2642DC29CC355D00D70D0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB2642DF29CC355D00D70D0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AB2642E829CC507200D70D0F /* FruitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCardView.swift; sourceTree = "<group>"; };
+		AB2642EA29CC5AEC00D70D0F /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,8 @@
 		AB2642D729CC355C00D70D0F /* Fructus */ = {
 			isa = PBXGroup;
 			children = (
-				AB2642D829CC355C00D70D0F /* FructusApp.swift */,
-				AB2642DA29CC355C00D70D0F /* ContentView.swift */,
+				AB2642E729CC4B6500D70D0F /* View */,
+				AB2642E629CC47D300D70D0F /* App */,
 				AB2642DC29CC355D00D70D0F /* Assets.xcassets */,
 				AB2642DE29CC355D00D70D0F /* Preview Content */,
 			);
@@ -65,6 +69,24 @@
 				AB2642DF29CC355D00D70D0F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AB2642E629CC47D300D70D0F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AB2642D829CC355C00D70D0F /* FructusApp.swift */,
+				AB10D00E29CD850C006AB395 /* OnboardingView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AB2642E729CC4B6500D70D0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB2642E829CC507200D70D0F /* FruitCardView.swift */,
+				AB2642EA29CC5AEC00D70D0F /* StartButtonView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB2642DB29CC355C00D70D0F /* ContentView.swift in Sources */,
+				AB2642E929CC507200D70D0F /* FruitCardView.swift in Sources */,
+				AB2642EB29CC5AEC00D70D0F /* StartButtonView.swift in Sources */,
+				AB10D00F29CD850C006AB395 /* OnboardingView.swift in Sources */,
 				AB2642D929CC355C00D70D0F /* FructusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
