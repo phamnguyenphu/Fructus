@@ -9,19 +9,21 @@ import SwiftUI
 
 struct SettingsView: View {
     // MARK: - PROPERTY
-
+    
     @Environment(\.dismiss) var dismiss
-
+    
+    @AppStorage("isOnboarding") var isOnboarding: Bool = false
+    
     let application: Application = applicationData
-
+    
     // MARK: - BODY
-
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 20) {
                     // MARK: - SECTION 1
-
+                    
                     GroupBox {
                         HStack(alignment: .center, spacing: 15) {
                             Image("logo")
@@ -35,17 +37,31 @@ struct SettingsView: View {
                     } label: {
                         SettingsLabelView(nameLabel: "Fructus", imageName: "info.circle")
                     }
-
+                    
                     // MARK: - SECTION 2
-
+                    
                     GroupBox {
-                        Text("hi")
+                        Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcom screen again")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        Toggle(isOn: $isOnboarding) {
+                            Text((isOnboarding ? "Restarted" : "Restart").uppercased())
+                                .foregroundColor(isOnboarding ? .green : .secondary)
+                                .fontWeight(.bold)
+                        }
+                        .padding()
+                        .background(Color(UIColor.tertiarySystemBackground))
+                        .cornerRadius(12)
+                        
                     } label: {
-                        SettingsLabelView(nameLabel: "Customization", imageName: "info.circle")
+                        SettingsLabelView(nameLabel: "Customization", imageName: "paintbrush")
                     }
-
+                    
                     // MARK: - SECTION 3
-
+                    
                     GroupBox {
                         SettingsApplicationRowView(titleRow: application.developer[0], contentRow: application.developer[1])
                         SettingsApplicationRowView(titleRow: application.designer[0], contentRow: application.designer[1])
@@ -55,7 +71,7 @@ struct SettingsView: View {
                         SettingsApplicationRowView(titleRow: application.github[0], linkLabel: application.github[1], linkDestination: LinkDestination.github.rawValue)
                         SettingsApplicationRowView(titleRow: application.swiftui[0], contentRow: application.swiftui[1])
                         SettingsApplicationRowView(titleRow: application.verson[0], contentRow: application.verson[1])
-
+                        
                     } label: {
                         SettingsLabelView(nameLabel: "Application", imageName: "apps.iphone")
                     }

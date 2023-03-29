@@ -25,10 +25,12 @@ struct SettingsApplicationRowView: View {
                 Spacer()
                 if contentRow != nil {
                     Text(contentRow!)
+                        .fontWeight(.bold)
                 }
                 else if linkLabel != nil && linkDestination != nil {
                     Link(destination: URL(string: "https://\(linkDestination!)")!) {
                         Text(linkLabel!)
+                            .fontWeight(.bold)
                         Image(systemName: "arrow.up.right.square")
                             .foregroundColor(.pink)
                     }

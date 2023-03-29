@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - PROPERTY
-
+    
     @State private var isShowingSettings: Bool = false
-
+    
     var fruit: [Fruit] = fruitsData
-
+    
     // MARK: - BODY
-
+    
     var body: some View {
         NavigationStack {
             List {
